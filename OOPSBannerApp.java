@@ -5,12 +5,12 @@ public class OOPSBannerApp {
 
         String space = "   ";
 
-        System.out.println("  *****   " + space + "  *****   " + space + "  ******  " + space + "  *****   ");
-        System.out.println(" *     *  " + space + " *     *  " + space + " *     *  " + space + " *     *  ");
-        System.out.println("*       * " + space + "*       * " + space + "*     *    " + space + "*          ");
-        System.out.println("*       * " + space + "*       * " + space + " ******     " + space + "  *****    ");
-        System.out.println("*       * " + space + "*       * " + space + "*            " + space + "       *   ");
-        System.out.println(" *     *  " + space + " *     *  " + space + "*            " + space + " *     *   ");
-        System.out.println("  *****   " + space + "  *****   " + space + "*            " + space + "  *****    ");
+        System.out.println("  *****   " + space + "  *****   " + space + "********** " + space + " ********  ");
+        System.out.println(" *     *  " + space + " *     *  " + space + "*        * " + space + " *         ");
+        System.out.println("*       * " + space + "*       * " + space + "*        * " + space + " *         ");
+        System.out.println("*       * " + space + "*       * " + space + " ********* " + space + " ********  ");
+        System.out.println("*       * " + space + "*       * " + space + "*          " + space + "        *  ");
+        System.out.println(" *     *  " + space + " *     *  " + space + "*          " + space + "        *  ");
+        System.out.println("  *****   " + space + "  *****   " + space + "*          " + space + " ********  ");
     }
 }
