@@ -1,7 +1,5 @@
 /**
- * UC3 - Print OOPS Banner using String.join()
- * @author Sai
- * @version 3.0
+ * UC5 - Print OOPS Banner using Inline Array Initialization
  */
 public class OOPSBannerApp {
 
@@ -9,46 +7,19 @@ public class OOPSBannerApp {
 
         String gap = "   ";
 
-        System.out.println(String.join(gap,
-                " *****  ",
-                " *****  ",
-                " ****** ",
-                " *****  "));
+        String[] banner = {
 
-        System.out.println(String.join(gap,
-                "*     * ",
-                "*     * ",
-                "*     * ",
-                "*     * "));
+            String.join(gap, " *****  ", " *****  ", " ****** ", " *****  "),
+            String.join(gap, "*     * ", "*     * ", "*     * ", "*     * "),
+            String.join(gap, "*     * ", "*     * ", "*     * ", "*       "),
+            String.join(gap, "*     * ", "*     * ", "******  ", " *****  "),
+            String.join(gap, "*     * ", "*     * ", "*       ", "      * "),
+            String.join(gap, "*     * ", "*     * ", "*       ", "*     * "),
+            String.join(gap, " *****  ", " *****  ", "*       ", " *****  ")
+        };
 
-        System.out.println(String.join(gap,
-                "*     * ",
-                "*     * ",
-                "*     * ",
-                "*       "));
-
-        System.out.println(String.join(gap,
-                "*     * ",
-                "*     * ",
-                "******  ",
-                " *****  "));
-
-        System.out.println(String.join(gap,
-                "*     * ",
-                "*     * ",
-                "*       ",
-                "      * "));
-
-        System.out.println(String.join(gap,
-                "*     * ",
-                "*     * ",
-                "*       ",
-                "*     * "));
-
-        System.out.println(String.join(gap,
-                " *****  ",
-                " *****  ",
-                "*       ",
-                " *****  "));
+        for (String line : banner) {
+            System.out.println(line);
+        }
     }
 }
