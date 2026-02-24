@@ -1,54 +1,58 @@
-/**
- * UC3 - Print OOPS Banner using String.join()
- * @author Sai
- * @version 3.0
- */
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        String gap = "   ";
+        System.out.println("OOPS Banner App - UC5: Inline Array Initialization\n");
 
-        System.out.println(String.join(gap,
-                " *****  ",
-                " *****  ",
-                " ****** ",
-                " *****  "));
+        // Declare and initialize array in a single statement
+        String[] banner = {
 
-        System.out.println(String.join(gap,
-                "*     * ",
-                "*     * ",
-                "*     * ",
-                "*     * "));
+                String.join(" ",
+                        "  *****  ",
+                        "  *****  ",
+                        " ******* ",
+                        " ******* "),
 
-        System.out.println(String.join(gap,
-                "*     * ",
-                "*     * ",
-                "*     * ",
-                "*       "));
+                String.join(" ",
+                        " **   ** ",
+                        " **   ** ",
+                        " **   ** ",
+                        " **      "),
 
-        System.out.println(String.join(gap,
-                "*     * ",
-                "*     * ",
-                "******  ",
-                " *****  "));
+                String.join(" ",
+                        "**     **",
+                        "**     **",
+                        "**     **",
+                        " **      "),
 
-        System.out.println(String.join(gap,
-                "*     * ",
-                "*     * ",
-                "*       ",
-                "      * "));
+                String.join(" ",
+                        "**     **",
+                        "**     **",
+                        " ******* ",
+                        "  *****  "),
 
-        System.out.println(String.join(gap,
-                "*     * ",
-                "*     * ",
-                "*       ",
-                "*     * "));
+                String.join(" ",
+                        "**     **",
+                        "**     **",
+                        " **      ",
+                        "      ** "),
 
-        System.out.println(String.join(gap,
-                " *****  ",
-                " *****  ",
-                "*       ",
-                " *****  "));
+                String.join(" ",
+                        " **   ** ",
+                        " **   ** ",
+                        " **      ",
+                        " **   ** "),
+
+                String.join(" ",
+                        "  *****  ",
+                        "  *****  ",
+                        " **      ",
+                        "  *****  ")
+        };
+
+        // Print using enhanced for loop
+        for (String line : banner) {
+            System.out.println(line);
+        }
     }
 }
