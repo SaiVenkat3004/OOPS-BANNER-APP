@@ -1,33 +1,52 @@
+/**
+ * OOPS Banner App - UC7
+ * Demonstrates storing character patterns inside an Inner Static Class.
+ */
 public class OOPSBannerApp {
 
-    public static void main(String[] args) {
+    /**
+     * Inner Static Class to encapsulate Character and its Pattern
+     */
+    public static class CharacterPatternMap {
 
-        System.out.println("OOPS Banner App - UC6: Using Methods\n");
+        private final char character;
+        private final String[] pattern;
 
-        String[] oPattern = getOPattern();
-        String[] pPattern = getPPattern();
-        String[] sPattern = getSPattern();
-
-        // Final banner array (7 lines)
-        String[] banner = new String[7];
-
-        for (int i = 0; i < 7; i++) {
-            banner[i] = String.join(" ",
-                    oPattern[i],
-                    oPattern[i],
-                    pPattern[i],
-                    sPattern[i]);
+        /**
+         * Constructor to initialize character and pattern
+         *
+         * @param character the character
+         * @param pattern   7-line banner pattern
+         */
+        public CharacterPatternMap(char character, String[] pattern) {
+            this.character = character;
+            this.pattern = pattern;
         }
 
-        // Print using enhanced for loop
-        for (String line : banner) {
-            System.out.println(line);
+        /**
+         * Returns the character
+         *
+         * @return character
+         */
+        public char getCharacter() {
+            return character;
+        }
+
+        /**
+         * Returns the 7-line pattern
+         *
+         * @return String array pattern
+         */
+        public String[] getPattern() {
+            return pattern;
         }
     }
 
-    // Method for Letter O
-    public static String[] getOPattern() {
-        return new String[] {
+    /**
+     * Utility method to create O pattern
+     */
+    public static CharacterPatternMap createOPattern() {
+        return new CharacterPatternMap('O', new String[]{
                 "  *****  ",
                 " **   ** ",
                 "**     **",
@@ -35,12 +54,14 @@ public class OOPSBannerApp {
                 "**     **",
                 " **   ** ",
                 "  *****  "
-        };
+        });
     }
 
-    // Method for Letter P
-    public static String[] getPPattern() {
-        return new String[] {
+    /**
+     * Utility method to create P pattern
+     */
+    public static CharacterPatternMap createPPattern() {
+        return new CharacterPatternMap('P', new String[]{
                 " ******* ",
                 " **   ** ",
                 " **   ** ",
@@ -48,12 +69,14 @@ public class OOPSBannerApp {
                 " **      ",
                 " **      ",
                 " **      "
-        };
+        });
     }
 
-    // Method for Letter S
-    public static String[] getSPattern() {
-        return new String[] {
+    /**
+     * Utility method to create S pattern
+     */
+    public static CharacterPatternMap createSPattern() {
+        return new CharacterPatternMap('S', new String[]{
                 " ******* ",
                 " **      ",
                 " **      ",
@@ -61,6 +84,34 @@ public class OOPSBannerApp {
                 "      ** ",
                 "      ** ",
                 " ******* "
+        });
+    }
+
+    /**
+     * Main method
+     */
+    public static void main(String[] args) {
+
+        System.out.println("OOPS Banner App - UC7: Using Inner Static Class\n");
+
+        // Create array of CharacterPatternMap objects
+        CharacterPatternMap[] patterns = {
+                createOPattern(),
+                createOPattern(),
+                createPPattern(),
+                createSPattern()
         };
+
+        // Build banner row by row
+        for (int row = 0; row < 7; row++) {
+
+            StringBuilder lineBuilder = new StringBuilder();
+
+            for (CharacterPatternMap patternObj : patterns) {
+                lineBuilder.append(patternObj.getPattern()[row]).append(" ");
+            }
+
+            System.out.println(lineBuilder.toString());
+        }
     }
 }
